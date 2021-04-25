@@ -4,7 +4,6 @@ import arrow.core.NonEmptyList
 import io.kotest.property.Arb
 import io.kotest.property.arbitrary.list
 import io.kotest.property.arbitrary.map
-import io.kotest.property.arbitrary.withEdgecases
 
 fun <A> Arb.Companion.nel(
    arbA: Arb<A>,
