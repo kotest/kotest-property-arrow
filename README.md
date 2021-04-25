@@ -2,7 +2,7 @@
 
 Kotest property test generators for [Arrow](https://arrow-kt.io/).
 
-See [docs](https://kotest.io/docs/proptest/property-test-generators-list.html).
+See [docs](https://kotest.io/docs/proptest/property-test-generators-arrow.html).
 
 Please create issues on the main kotest [board](https://github.com/kotest/kotest/issues).
 
