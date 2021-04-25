@@ -26,8 +26,8 @@ class NonEmptyListTest : FunSpec({
          .take(3, RandomSource.seeded(123123L))
          .toList() shouldContainExactly listOf(
          nonEmptyListOf("a", "a"),
-         nonEmptyListOf("a", "a"),
-         nonEmptyListOf("a", "a", "a", "a")
+         nonEmptyListOf("a", "a", "a", "a"),
+         nonEmptyListOf("a", "a", "a", "a"),
       )
    }
 
