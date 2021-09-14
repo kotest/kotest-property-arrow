@@ -23,6 +23,6 @@ fun <A> Exhaustive.Companion.none() = exhaustive(listOf(None))
  */
 fun <A> Arb.Companion.some(arb: Arb<A>): Arb<Option<A>> = arb.map { it.some() }
 
-fun <A> Arb.Companion.none(): Arb<Option<A>> = arbitrary({ None }) { None }
+fun <A> Arb.Companion.none(): Arb<Option<A>> = arbitrary(listOf(None)) { None }
 
 fun <A> Arb.Companion.option(arb: Arb<A>): Arb<Option<A>> = some(arb).merge(none())

@@ -41,7 +41,7 @@ class NonEmptyListTest : FunSpec({
          nonEmptyListOf(9),
          nonEmptyListOf(1, 1, 7, 3, 2),
          nonEmptyListOf(7, 1, 4),
-         nonEmptyListOf(5, 4, 1, 4),
+         nonEmptyListOf(5, 4, 8, 4),
          nonEmptyListOf(6, 6, 4, 6)
       )
 

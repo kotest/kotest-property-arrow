@@ -35,16 +35,16 @@ class OptionTest : FunSpec({
 
    test("Arb.option should apply arbitrary values to an option which may be empty") {
       Arb.option(Arb.int(1..10)).take(10, RandomSource.seeded(123456L)).toList() shouldContainExactly listOf(
+         none(),
          1.some(),
+         none(),
          none(),
          none(),
          4.some(),
          none(),
+         10.some(),
          none(),
-         7.some(),
-         6.some(),
-         none(),
-         2.some()
+         7.some()
       )
    }
 })
