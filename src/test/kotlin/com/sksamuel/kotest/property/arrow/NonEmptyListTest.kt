@@ -22,7 +22,7 @@ class NonEmptyListTest : FunSpec({
    }
 
    test("Arb.nel should not fail if generator arb has no edgecases") {
-      Arb.nel(Arb.constant("a"), 1..5)
+      Arb.nel(Arb.of("a"), 1..5)
          .take(3, RandomSource.seeded(123123L))
          .toList() shouldContainExactly listOf(
          nonEmptyListOf("a", "a"),

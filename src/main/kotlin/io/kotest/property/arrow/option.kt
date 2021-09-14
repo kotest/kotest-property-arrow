@@ -6,7 +6,7 @@ import arrow.core.Some
 import arrow.core.some
 import io.kotest.property.Arb
 import io.kotest.property.Exhaustive
-import io.kotest.property.arbitrary.constant
+import io.kotest.property.arbitrary.arbitrary
 import io.kotest.property.arbitrary.map
 import io.kotest.property.arbitrary.merge
 import io.kotest.property.exhaustive.exhaustive
@@ -23,6 +23,6 @@ fun <A> Exhaustive.Companion.none() = exhaustive(listOf(None))
  */
 fun <A> Arb.Companion.some(arb: Arb<A>): Arb<Option<A>> = arb.map { it.some() }
 
-fun <A> Arb.Companion.none(): Arb<Option<A>> = Arb.constant(None)
+fun <A> Arb.Companion.none(): Arb<Option<A>> = arbitrary(listOf(None)) { None }
 
 fun <A> Arb.Companion.option(arb: Arb<A>): Arb<Option<A>> = some(arb).merge(none())
